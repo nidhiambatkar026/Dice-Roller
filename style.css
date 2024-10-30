@@ -4,6 +4,39 @@ body{
 }
 .container{
     height: 500px;
-    width: 500px;
-    border: 2px solid black;
+    width: 400px;
+    border: 2px solid #3da9fc;
+    margin: 50px auto;
+    background-color: #fffffe;
+    box-shadow: 0px 0px 5px 5px #3da9fc;
+}
+.main_img{
+    height: 250px;
+    width: 250px;
+    margin: 10px 80px;
+}
+.title{
+    text-align: center;
+    font-family: cursive;
+    color: #094067;
+}
+.Btn{
+    display: flex;
+    justify-content: center;
+}
+.roll_btn{
+    height: 60px;
+    width: auto;
+    margin: 20px auto;
+    background-color: #3da9fc;
+    color: #fffffe;
+    border: 2px solid ;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: cursive;
+}
+.roll_btn:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
 }
