@@ -11,8 +11,36 @@
         <h1 class="title">Dice Roller</h1>
         <img src="./Images/dice.png" alt="dice" class="main_img" id="main_img"/>
         <div class="Btn">
-            <button type="button" class="roll_btn">Roll the Dice</button>
+            <button type="button" class="roll_btn" onclick="dice_roll()">Roll the Dice</button>
         </div>
     </div>
+    <script>
+        function dice_roll(){
+            const min = 1;
+            const max = 6;
+            
+            const randomnum = Math.round(Math.random() * (max-min)) + min;
+
+            const dice_img = document.getElementById('main_img');
+            if(randomnum == 1){
+                dice_img.src = 'one.png';
+            }
+            else if(randomnum == 2){
+                dice_img.src = 'two.png';
+            }
+            else if(randomnum == 3){
+                dice_img.src = 'three.png';
+            }
+            else if(randomnum == 4){
+                dice_img.src = 'four.png';
+            }
+            else if(randomnum == 5){
+                dice_img.src = 'five.png';
+            }
+            else if(randomnum == 6){
+                dice_img.src = 'six.png';
+            }
+        }
+    </script>
 </body>
 </html>
