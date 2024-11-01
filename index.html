@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Roller</title>
-    <link href="style.css" rel="Stylesheet"/>
+    <link href="style.css" rel="Stylesheet" />
 </head>
+
 <body>
     <div class="container">
         <h1 class="title">Dice Roller</h1>
-        <img src="./Images/dice.png" alt="dice" class="main_img" id="main_img"/><br/><br/>
+        <img src="./Images/dice.png" alt="dice" class="main_img" id="main_img" /><br /><br />
         <div class="Btn">
             <button type="button" class="roll_btn" onclick="dice_roll()">Roll the Dice</button>
         </div>
     </div>
     <script>
         const dice_img = document.getElementById('main_img');
-        function dice_roll(){
+        function dice_roll() {
             const min = 1;
             const max = 6;
-            
-            const randomnum = Math.round(Math.random() * (max-min)) + min;
 
-            
-            if(randomnum == 1){
-                dice_img.src = './Images/one.png';
-            }
-            else if(randomnum == 2){
-                dice_img.src = './Images/two.png';
-            }
-            else if(randomnum == 3){
-                dice_img.src = './Images/three.png';
-            }
-            else if(randomnum == 4){
-                dice_img.src = './Images/four.png';
-            }
-            else if(randomnum == 5){
-                dice_img.src = './Images/five.png';
-            }
-            else if(randomnum == 6){
-                dice_img.src = './Images/six.png';
+            const randomnum = Math.round(Math.random() * (max - min)) + min;
+            switch (randomnum) {
+                case 1:
+                    dice_img.src = './Images/one.png';
+                    break;
+                case 2:
+                    dice_img.src = './Images/two.png';
+                    break;
+                case 3:
+                    dice_img.src = './Images/three.png';
+                    break;
+                case 4:
+                    dice_img.src = './Images/four.png';
+                    break;
+                case 5:
+                    dice_img.src = './Images/five.png';
+                    break;
+                case 6:
+                    dice_img.src = './Images/six.png';
+                    break;
+                default:
+                    dice_img.src = './Images/dice.png';
             }
         }
     </script>
 </body>
+
 </html>
